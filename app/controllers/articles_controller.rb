@@ -25,6 +25,10 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def create
+    @user = User.create( params[:user] )
+  end
+
   # GET /articles/1/edit
   def edit
   end
