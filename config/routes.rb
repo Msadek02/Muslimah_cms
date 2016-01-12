@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'articles#index'
+  get 'welcome/home'
+
+devise_for :users, :controllers => { :sessions => "users/sessions" }
+  root to: 'welcome#home'
   resources :articles do
     collection { get :search }
   end
