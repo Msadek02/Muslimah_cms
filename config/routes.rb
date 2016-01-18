@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   get 'welcome/home'
+  devise_for :users
+  resources :users do
+    resources :profiles
+  end
 
-devise_for :users, :controllers => { :sessions => "users/sessions" }
+  #, :controllers => { :sessions => "users/sessions" }
   root to: 'welcome#home'
   resources :articles do
     collection { get :search }
@@ -38,7 +42,7 @@ devise_for :users, :controllers => { :sessions => "users/sessions" }
   #   resources :products do
   #     resources :comments, :sales
   #     resource :seller
-  #   end
+  #   end 
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
