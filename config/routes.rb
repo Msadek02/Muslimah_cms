@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
-  get 'welcome/home'
+  
+  root to: 'welcome#home'
+  controller :welcome do
+    get 'about', as: "about"
+    get 'contact', as: "contact"
+  end
+  
   devise_for :users
   resources :users do
     resources :profiles
   end
 
   #, :controllers => { :sessions => "users/sessions" }
-  root to: 'welcome#home'
+ 
   resources :articles do
     collection { get :search }
   end
