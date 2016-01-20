@@ -71,4 +71,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  #last resort route
+  match ':controller(/:action(/:id))', :via => :get
 end

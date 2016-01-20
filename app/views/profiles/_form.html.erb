@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+     <%= f.label :avatar %><br>
+     <%= f.file_field :avatar, multiple: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
   </div>
@@ -30,10 +35,16 @@
    
   <div class="field">
     <%= f.label :birth_date %><br>
-    <%= f.date_select :birth_date %>
+    <%= f.date_select :birth_date, start_year: 1900 %>
   </div>
   
   <div class="field">
     <%= f.label :country %><br>
-    <%= country_select("profile", "country") %>
+    <%= country_select("profile", "country", priority_countries: ["US"]) %>
+
+  </div>
+
+  <div class="field">
+    <%= f.submit %><br>
+  </div>
 <% end %>
