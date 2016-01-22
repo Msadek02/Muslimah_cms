@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'font-awesome-rails'
 gem 'carrierwave'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'jquery-rails'
 gem 'agency', '~> 0.0.1'
 gem 'turbolinks'
@@ -37,4 +38,3 @@ gem 'elasticsearch', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git
 gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 gem 'quiet_assets', group: 'development'
-gem "paperclip", "~> 4.3"

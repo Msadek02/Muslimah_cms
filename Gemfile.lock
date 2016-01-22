@@ -21,6 +21,17 @@ GIT
       faraday
       multi_json
 
+GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: bd016009dbf74fc8f999e78a68c9e5869eb0dd6a
+  specs:
+    paperclip (4.3.1)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (~> 0.3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -130,7 +141,7 @@ GEM
     metaclass (0.0.4)
     method_source (0.8.2)
     mime-types (2.6.2)
-    mimemagic (0.3.0)
+    mimemagic (0.3.1)
     mini_portile (0.6.2)
     minitest (5.8.2)
     mocha (1.1.0)
@@ -141,12 +152,6 @@ GEM
     nokogiri (1.6.6.3)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
-    paperclip (4.3.2)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      cocaine (~> 0.5.5)
-      mime-types
-      mimemagic (= 0.3.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -243,7 +248,7 @@ DEPENDENCIES
   jquery-rails
   mocha
   mysql2 (~> 0.3.18)
-  paperclip (~> 4.3)
+  paperclip!
   pry
   quiet_assets
   rails (= 4.2.4)
