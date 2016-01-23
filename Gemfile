@@ -20,6 +20,8 @@ gem 'devise'
 gem 'country_select'
 gem 'pry'
 gem 'mysql2', '~> 0.3.18'
+gem 'mini_magick'
+
 
 
 group :development, :test do
